@@ -1,7 +1,7 @@
 #!/bin/bash
-
+while true; do
 echo "Welcome to my script, would you like to make a new directory or monitor your system's health?"
-read -p "For making a new directory type '1'. For monitoring your system health type '2': " user_option
+read -p "For making a new directory type '1'. For monitoring your system health type '2'. To exit, type '3': " user_option
 
 if [ "$user_option" = "1" ]; then
   read -p "Enter directory name: " user_input
@@ -17,7 +17,12 @@ if [ "$user_option" = "1" ]; then
 elif [ "$user_option" = "2" ]; then
   echo "Opening the system monitoring app..."
   gnome-system-monitor
-
+  
+elif [ "$user_option" = "3" ]; then
+echo "Exiting..."
+sleep 1
+exit 0
 else
   echo "Invalid option selected."
 fi
+done
