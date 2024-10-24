@@ -15,3 +15,5 @@ else
   echo "Directory '$user_input' created."
 fi
 elif ["$user_option" = "2" ]; then
+	echo "Opening the system monitoring app..."
+	gnome-system-monitor
